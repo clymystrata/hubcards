@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+form {
+  margin: 1em 0;
+}
+
+.hub-card {
+  margin-left:10%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  grid-gap: 4px;
+}
+
+.avatar img {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 1px;
+  width:50px;
+}
+
+.info {
+  grid-column: 2;
+  grid-row: 1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+}
+
+.info ul {
+  padding: 0;
+  margin: 1em 0 0 0;
+  list-style-type: none;
+}
+
+.coBadge {
+  text-align:left;
+}
+
+li.coBadge {
+  list-style: none;
+  font-weight: 300;
+}
