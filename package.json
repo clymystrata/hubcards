@@ -4,13 +4,15 @@
   "private": true,
   "dependencies": {
     "async": "^2.5.0",
+    "express": "^4.16.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.13",
     "react-web-tabs": "^0.4.3"
   },
   "scripts": {
-    "start": "set PORT=80 && react-scripts start",
+    "start": "npm run build && nodemon ./server/listener.js",
+    "devstart": "set PORT=80 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
