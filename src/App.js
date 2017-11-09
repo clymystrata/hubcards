@@ -4,14 +4,23 @@ import './App.css';
 import './index.css';
 import 'react-web-tabs/dist/react-web-tabs.css';
 import CardList from './components/cards';
-import Form from './components/form';
+import getFollowing from './util/ajax.js';
 
 class App extends Component {
-  state = { cards: []};
+  state = { cards:[]};
+
+  addCards = (data) => {
+     this.setState({ cards: data });
+  };
+
   
-    addCards = (data) => {
-      this.setState(prevState => ({ cards: data }));
-    };
+  componentDidMount = () =>
+  {
+    getFollowing().then(result => {
+      this.addCards(result.data) 
+    });
+  }
+
 
   render() {
     return (
@@ -21,7 +30,6 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <div>
-          <Form onSubmit={this.addCards}/>
           <CardList cards = {this.state.cards} />
         </div>
       </div>

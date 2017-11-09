@@ -2,6 +2,7 @@
   "name": "hubcards",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8033",
   "dependencies": {
     "async": "^2.5.0",
     "axios": "^0.17.0",
@@ -14,7 +15,7 @@
   },
   "scripts": {
     "start": "npm run build && nodemon ./server/listener.js",
-    "devstart": "set PORT=80 && react-scripts start",
+    "devstart": "concurrently \"nodemon ./server/listener.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
