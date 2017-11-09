@@ -8,8 +8,8 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: lightblue;
+  height: 50px;
   padding: 20px;
   color: white;
 }
@@ -23,10 +23,6 @@
   to { transform: rotate(360deg); }
 }
 
-form {
-  margin: 1em 0;
-}
-
 .hub-card {
   margin-left:10%;
   width: 80%;
@@ -35,12 +31,30 @@ form {
   grid-gap: 4px;
 }
 
+.avatar {
+  padding: 2px .5em 0 .5em;
+  border: thin black;
+  border-radius: 20px;
+  vertical-align: middle;
+  background-color:white;
+}
 .avatar img {
   grid-column: 1;
   grid-row: 1;
   padding: 1px;
   width:50px;
+  border: thin black;
+  border-radius: 20px;
 }
+
+button.rwt__tab[aria-selected="true"] .avatar {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  margin: 0 0 4px 0;
+  margin-right: -5px;
+  
+}
+
 
 .info {
   grid-column: 2;
@@ -63,3 +77,42 @@ li.coBadge {
   list-style: none;
   font-weight: 300;
 }
+
+div.rwt__tabpanel[aria-expanded="true"]  {
+  border: 1px solid white;
+  border-top-left-radius: 20px;
+  margin:0;
+  padding-left: 1em;
+}
+
+button.rwt__tab  {
+  padding: 0 .25em 0 .5em;
+  background-color: lightblue;
+  padding-right: .25em;
+}
+
+div.rwt__tablist[aria-orientation="vertical"] {
+  margin: 0;
+}
+
+.rwt__tablist[aria-orientation="vertical"] button.rwt__tab[aria-selected="true"] {
+  background-color: lightblue;
+}
+
+.rwt__tablist[aria-orientation="vertical"] button.rwt__tab[aria-selected="true"]:after {
+  /*border-right: 4px solid black;*/
+  border: none;
+}
+
+.nameTab { 
+  height:20px;
+  font-size: small;
+  text-align:left;
+  padding: 2px .5em 0 .5em;
+  border: thin black;
+  border-radius: 20px;
+  background-color: white;
+  margin: 2px 0 4px 0;
+  vertical-align: middle;
+}
+
