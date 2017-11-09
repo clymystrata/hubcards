@@ -12,7 +12,7 @@ app.get('/api',(req, res) => {
     .then(result => res.json(result))
     .catch(e => {
         console.log(e);
-        res.json([]);
+        res.json({data:[]});
     });
 });
 
