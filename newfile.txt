@@ -1,0 +1,10 @@
+description.md
+LICENSE
+newfile.txt
+node_modules/
+package.json
+package-lock.json
+public/
+README.md
+server/
+src/
