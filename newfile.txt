@@ -1,5 +1,3 @@
-description.md
-LICENSE
 newfile.txt
 node_modules/
 package.json
@@ -8,3 +6,5 @@ public/
 README.md
 server/
 src/
+
+this is a change!
